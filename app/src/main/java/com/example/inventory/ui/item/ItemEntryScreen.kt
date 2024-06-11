@@ -59,10 +59,7 @@ fun ItemEntryScreen(
             itemUiState = viewModel.itemUiState,
             onItemValueChange = viewModel::updateUiState,
             onSaveClick = { coroutineScope.launch{ viewModel.saveItem() } },
-            modifier = Modifier
-                .padding(
-                    innerPadding
-                )
+            modifier = Modifier.padding(innerPadding)
                 .verticalScroll(rememberScrollState())
                 .fillMaxWidth()
         )
